@@ -1,4 +1,5 @@
 "use client";
+import { themeMode } from "@/constants/constValue";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { CiDark } from "react-icons/ci";
@@ -10,7 +11,7 @@ const ThemeComp = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-  const themeMode = theme === "system" ? systemTheme : theme;
+
   return (
     <div>
       {mounted &&

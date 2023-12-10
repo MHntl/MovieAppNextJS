@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 import ThemeComp from "./ThemeComp";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { menu } from "@/constants/constValue";
 
 const Header = () => {
   const router = useRouter();
@@ -15,16 +16,7 @@ const Header = () => {
       setKeyword(``);
     }
   };
-  const menu = [
-    {
-      name: `About`,
-      url: "/about",
-    },
-    {
-      name: "Sign In",
-      url: "/login",
-    },
-  ];
+
   return (
     <div className=" flex items-center gap-5 h-20 p-5">
       <Link

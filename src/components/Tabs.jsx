@@ -1,4 +1,5 @@
 "use client";
+import { tabs } from "@/constants/constValue";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
@@ -6,20 +7,7 @@ import React from "react";
 const Tabs = () => {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
-  const tabs = [
-    {
-      name: "Most Popular",
-      url: "popular",
-    },
-    {
-      name: "Top Rated",
-      url: "top_rated",
-    },
-    {
-      name: "Upcoming",
-      url: "upcoming",
-    },
-  ];
+
   return (
     <div className="p-5 flex items-center justify-center bg-gray-100 dark:bg-gray-900 gap-7 m=5">
       {tabs.map((tab, i) => (
